@@ -34,7 +34,7 @@ def start(update: Update, context: CallbackContext) -> int:
     reply_markup = InlineKeyboardMarkup(keyboard_menu_principal)
     
     # Actualizar Mensaje
-    update.message.reply_text("Bienvenido a CoronaBot Chile. ¿Que deseas hacer?",reply_markup=reply_markup)
+    update.message.reply_text("Bienvenido a miComuna Bot Chile. ¿Que deseas hacer?",reply_markup=reply_markup)
     return PRINCIPAL
 
 
@@ -75,7 +75,7 @@ def menu_registro(update: Update, context: CallbackContext):
 def ingresar_comuna(update: Update, context: CallbackContext):
     query = update.callback_query
     query.answer()
-    query.edit_message_text(text="Escriba @coronaChile_bot y posteriormente el nombre de la comuna para registrarla.")
+    query.edit_message_text(text="Escriba @micomuna_bot y posteriormente el nombre de la comuna para registrarla.")
 
 def borrar_comuna(update: Update, context: CallbackContext):
     message_text = update.message.text.replace("/borrar","").title().strip()  # Nombre comuna

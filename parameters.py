@@ -1,5 +1,5 @@
 # Nombre bot
-NOMBRE_BOT = "@coronaChile_bot"
+NOMBRE_BOT = "@micomuna_bot"
 
 # Path Base de datos
 PATH_BASE = 'base.sqlite'

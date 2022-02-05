@@ -20,7 +20,7 @@ class Data(ABC):
 
     def __init__(self,nombre_dato, identificador, ruta_archivo):
         self.data = pd.read_csv(ruta_archivo)
-        self.weeks = 32  # Cantidad de semanas para hacer los datos
+        self.weeks = 4*4  # Cantidad de semanas para hacer los datos
         self.identificador = identificador
         self.nombre_dato = nombre_dato
         self.fase = Fase()
@@ -164,6 +164,6 @@ def generar_todos_los_plots():
 if __name__ == "__main__":
     import os
     os.system('clear')
-    test = CasosIncrementales("Casos Incrementales","casosIncrementales", p.PATH_CASOS_INCREMENTALES)
+    test = CasosActivos("Casos Activos", "casosActivos", p.PATH_CASOS_ACTIVOS)
     #test.puntos("Macul")
     test.generar_plots()

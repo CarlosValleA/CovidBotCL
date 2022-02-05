@@ -29,7 +29,6 @@ class CheckData:
                 return False, []
 
             generar_todos_los_plots()
-            ## Excecute python or julia scripts to create graphs
             return True, datosUpdated
         else:
             return False, []
